@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  margin: 0;
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between
+}
+
+.content {
+  flex-grow: 1;
+}
