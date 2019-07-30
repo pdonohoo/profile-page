@@ -5,17 +5,25 @@ import contactStyles from '../styles/contact.module.scss'
 
 const Contact = () => {
   return (
-    <Layout style={{margin: 0}}>
-      <div className={contactStyles.layout}>
-      <h1>Preston Donohoo</h1>
-      <h4>
-        You an reach me at any of the following.
-      </h4>
-      <ul>
-        <li>
-         Check me out on <a href='www.linkedin.com/in/prestonscottdonohoo' >LinkedIn</a>!
+    <Layout>
+      <div >
+        <div className={contactStyles.header}>
+          <h1 >Preston Donohoo</h1>
+          <h4>
+            You can reach me at any of the following.
+        </h4>
+        </div>
+        <ul>
+          <li>
+            Check me out on <a href='www.linkedin.com/prestonscottdonohoo' target='_blank' >LinkedIn</a>!
         </li>
-      </ul>
+        <li>
+          Send me an email at preston.s.donohoo@gamil.com
+        </li>
+        <li>
+          Check out my stuff on <a href='https://github.com/pdonohoo' target='_blank' >github</a>
+        </li>
+        </ul>
       </div>
     </Layout>
   )

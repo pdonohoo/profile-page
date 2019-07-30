@@ -9,7 +9,7 @@ const Layout = (props) => {
     <div className={layoutStyles.container}>
       
         <div className={layoutStyles.topBar}>
-          <h4> Preston Donohoo</h4>
+          {/* <h4> Preston Donohoo</h4> */}
           <Header />
         </div>
         <div className={layoutStyles.content}>

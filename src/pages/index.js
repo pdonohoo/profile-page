@@ -4,6 +4,9 @@ import Layout from '../components/layout'
 import '../styles/index.scss'
 import { graphql, useStaticQuery } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
+import Github from "../images/github.inline.svg"
+import Linkedin from '../images/linkedin.inline.svg'
+
 
 
 const Index = () => {
@@ -25,13 +28,19 @@ const Index = () => {
 
   const imageData = data.imageSharp.fluid
 
+
   return (
 
     <BackgroundImage fluid={imageData} >
       <Layout>
         <div style={{ textAlign: 'center' }}>
           <h1>{data.site.siteMetadata.author}</h1>
-          <p>Aspiring Software Developer</p>
+          <p>Software Developer</p>
+          <div>
+          <a style={{ color: 'black', }} href='www.linkedin.com/prestonscottdonohoo' target='_blank' > <Linkedin style={{width: 30, height: 30, marginRight: 20, }} /></a>
+          <a style={{ color: 'black', }} href='https://github.com/pdonohoo' target='_blank' ><Github style={{width: 30, height: 30}} />  </a>
+          </div>
+
         </div>
       </Layout>
     </BackgroundImage>

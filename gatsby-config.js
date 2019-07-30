@@ -10,7 +10,7 @@ module.exports = {
   siteMetadata: {
     title: 'Donohoo Family Blog',
     author: 'Preston Donohoo'
-  },
+  }, 
 
   plugins: [
     'gatsby-plugin-sass', 
@@ -28,6 +28,15 @@ module.exports = {
         path: path.join(__dirname, `src`, `images`),
       }
     },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: path.join(__dirname, `src`, `images`)
+        }
+      }
+    },
+    
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
@@ -45,5 +54,6 @@ module.exports = {
         ]
       }
     }
+    
   ]
 }
