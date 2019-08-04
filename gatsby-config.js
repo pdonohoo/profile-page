@@ -1,8 +1,3 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.org/docs/gatsby-config/
- */
 
 const path = require(`path`)
 
@@ -32,7 +27,7 @@ module.exports = {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: path.join(__dirname, `src`, `images`)
+          include: path.join(__dirname, `src`, `images`) 
         }
       }
     },

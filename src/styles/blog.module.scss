@@ -6,29 +6,26 @@
 
 .posts {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   list-style-type: none;
   text-align: left;
-  margin-top: 5px;
-  width: 900px;
   text-decoration: none;
-  color: rgb(19, 64, 107);
+  color: black;
 
-}
+} 
 
 .layout {
   display: flex;
-  align-self: center;
   
 }
 
 .post{
-  margin-top: 10px;
-  background-color: whitesmoke;
-  height: 100px;
+  display: flex;
+  width: 300px;
+  height: 150px;
+  flex-direction: column;
   text-decoration: none;
   
-
 }
 
 .post:hover{

@@ -3,6 +3,8 @@ import React from 'react'
 import Layout from '../components/layout'
 import { Link, graphql, useStaticQuery } from 'gatsby'
 import blogStyles from '../styles/blog.module.scss'
+import Img from 'gatsby-image'
+
 
 const Blog = () => {
 
@@ -17,13 +19,21 @@ const Blog = () => {
           frontmatter{
             title
             date
+            image {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }
     }
   }
   `)
-  console.log(blog)
+
+  // const thumbnail = blog.allMarkdownRemark.edges[0].node.frontmatter.image.childImageSharp.fluid
 
   return (
     <Layout>
@@ -34,15 +44,26 @@ const Blog = () => {
           <ol className={blogStyles.posts}>
             {
               blog.allMarkdownRemark.edges.map(post =>
-                <li className={blogStyles.post}>
-                  <Link to={`/blog/${post.node.fields.slug}`} className={blogStyles.posts}>
-                    <h2>
-                      {post.node.frontmatter.title}
-                    </h2>
-                    <p>
-                      Publish Date: {post.node.frontmatter.date}
-                    </p>
+                <li style={{ marginRight: 20 }} >
+                  <Link to={`/blog/${post.node.fields.slug}`}>
+                    <Img fluid={post.node.frontmatter.image.childImageSharp.fluid} />
                   </Link>
+                  <div className={blogStyles.post}>
+                    <Link to={`/blog/${post.node.fields.slug}`} className={blogStyles.posts}>
+                      <div style={{ display: 'flex', flexDirection: 'column' }}>
+                        <div>
+                          <h2 style={{ marginBotton: 5, }}>
+                            {post.node.frontmatter.title}
+                          </h2>
+                        </div>
+                        <div>
+                          <p>
+                            Publish Date: {post.node.frontmatter.date}
+                          </p>
+                        </div>
+                      </div>
+                    </Link>
+                  </div>
                 </li>
               )
             }

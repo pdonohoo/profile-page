@@ -1,9 +1,9 @@
 import React from 'react'
 
 import Layout from '../components/layout'
-import { Link, graphql} from 'gatsby'
-import Blog from '../pages/blog';
+import { graphql} from 'gatsby'
 import blogsStyles from '../template/blogs.module.scss'
+
 
 export const query = graphql`
 query ( $slug: String!) {
@@ -22,6 +22,7 @@ const Blogs = (props) => {
   return (
     <Layout >
       <div className={blogsStyles.layout}>
+
         <h1> {props.data.markdownRemark.frontmatter.title} </h1>
         <h4>
           {props.data.markdownRemark.frontmatter.date}

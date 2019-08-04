@@ -1,6 +1,7 @@
 ---
 title: 'My First Blog Post!!!'
 date: '7-15-2019'
+image: ./firstpost-thumbnail.jpg
 ---
 
 ![road](./road.jpg)
