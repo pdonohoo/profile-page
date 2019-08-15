@@ -15,7 +15,7 @@ const Contact = () => {
         </div>
         <ul>
           <li>
-            Check me out on <a href='www.linkedin.com/prestonscottdonohoo' target='_blank' >LinkedIn</a>!
+            Check me out on <a href='https://www.linkedin.com/in/prestondonohoo/' target='_blank' >LinkedIn</a>!
         </li>
         <li>
           Send me an email at preston.s.donohoo@gamil.com

@@ -37,7 +37,7 @@ const Index = () => {
           <h1>{data.site.siteMetadata.author}</h1>
           <p>Software Developer</p>
           <div>
-          <a style={{ color: 'black', }} href='www.linkedin.com/prestonscottdonohoo' target='_blank' > <Linkedin style={{width: 30, height: 30, marginRight: 20, }} /></a>
+          <a style={{ color: 'black', }} href='https://www.linkedin.com/in/prestondonohoo/' target='_blank' > <Linkedin style={{width: 30, height: 30, marginRight: 20, }} /></a>
           <a style={{ color: 'black', }} href='https://github.com/pdonohoo' target='_blank' ><Github style={{width: 30, height: 30}} />  </a>
           </div>
 

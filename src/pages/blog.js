@@ -11,54 +11,62 @@ const Blog = () => {
   const blog = useStaticQuery(graphql`
   query{
     allMarkdownRemark{
-      edges{
+      edges{ 
         node{
           fields{
             slug
           }
+          excerpt (pruneLength: 70)
           frontmatter{
             title
             date
             image {
-              childImageSharp {
-                fluid {
+              childImageSharp  {
+                fluid (maxHeight: 200, maxWidth: 350) {
                   ...GatsbyImageSharpFluid
                 }
               }
             }
-          }
-        }
+          } 
+        } 
       }
     }
   }
   `)
 
-  // const thumbnail = blog.allMarkdownRemark.edges[0].node.frontmatter.image.childImageSharp.fluid
 
   return (
     <Layout>
       <div className={blogStyles.title} >
         <h1> Donohoo Family Blog </h1>
         <p>My Journey</p>
-        <div className={blogStyles.layout}>
-          <ol className={blogStyles.posts}>
+        <div className={blogStyles.layout} >
+          <ol className={blogStyles.posts} >
             {
               blog.allMarkdownRemark.edges.map(post =>
-                <li style={{ marginRight: 20 }} >
+                <li  style={{ marginRight: 20,  }}  >
                   <Link to={`/blog/${post.node.fields.slug}`}>
                     <Img fluid={post.node.frontmatter.image.childImageSharp.fluid} />
                   </Link>
-                  <div className={blogStyles.post}>
+                  <div className={blogStyles.post} style={{justifyContent:'flex-end'}}>
                     <Link to={`/blog/${post.node.fields.slug}`} className={blogStyles.posts}>
-                      <div style={{ display: 'flex', flexDirection: 'column' }}>
+                      <div  style={{ display: 'flex', flexDirection: 'column',}}>
                         <div>
-                          <h2 style={{ marginBotton: 5, }}>
+                          <h2 style={{ marginBotton: 5, textAlign: 'center' }}>
                             {post.node.frontmatter.title}
                           </h2>
                         </div>
                         <div>
-                          <p>
+                          <p style={{textAlign:'center',}}>
                             Publish Date: {post.node.frontmatter.date}
+                          </p>
+                          <p>
+                            {post.node.excerpt}
+                            <Link  to={`/blog/${post.node.fields.slug}`}>
+                              <button style={{ color: 'rgb(19, 64, 107)' }}>
+                                Read More!
+                              </button>
+                            </Link>
                           </p>
                         </div>
                       </div>

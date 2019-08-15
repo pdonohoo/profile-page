@@ -21,11 +21,15 @@
 
 .post{
   display: flex;
-  width: 300px;
-  height: 150px;
+  width: 325;
+  height: 200px;
   flex-direction: column;
   text-decoration: none;
-  
+ 
+}
+
+.data {
+  justify-content: inherit
 }
 
 .post:hover{

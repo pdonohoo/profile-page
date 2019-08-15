@@ -1,5 +1,5 @@
 ---
-title: 'Introducing The Donohoo Fam'
+title: 'The Donohoo Fam'
 date: '7-25-2019'
 image: ./party.jpg
 ---
