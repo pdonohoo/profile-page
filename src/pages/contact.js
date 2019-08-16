@@ -1,30 +1,38 @@
-import React from 'react'
+import React from "react"
 
-import Layout from '../components/layout'
-import contactStyles from '../styles/contact.module.scss'
+import Layout from "../components/layout"
+import contactStyles from "../styles/contact.module.scss"
 
 const Contact = () => {
   return (
     <Layout>
-      <div >
+      <div>
         <div className={contactStyles.header}>
-          <h1 >Preston Donohoo</h1>
-          <h4>
-            You can reach me at any of the following.
-        </h4>
+          <h1>Preston Donohoo</h1>
+          <h4>Send me a message!</h4>
         </div>
-        <ul>
-          <li>
-            Check me out on <a href='https://www.linkedin.com/in/prestondonohoo/' target='_blank' >LinkedIn</a>!
-        </li>
-        <li>
-          Send me an email at preston.s.donohoo@gamil.com
-        </li>
-        <li>
-          Check out my stuff on <a href='https://github.com/pdonohoo' target='_blank' >github</a>
-        </li>
-        </ul>
       </div>
+      <form className={contactStyles.form}>
+        <div className={contactStyles.inputs}>
+          <div>First Name </div>
+          <div>Last Name</div>
+        </div>
+        <div className={contactStyles.inputs}>
+          <input className={contactStyles.input}></input>
+          <input className={contactStyles.input}></input>
+        </div>
+        <div className={contactStyles.inputs}>
+          <div>Phone #</div>
+          <div>Email </div>
+        </div>
+        <div className={contactStyles.inputs}>
+          <input className={contactStyles.input}></input>
+          <input className={contactStyles.emailInput}></input>
+        </div>
+        message <textarea className={contactStyles.message}></textarea>
+        <button className={contactStyles.button}>send</button>
+        
+      </form>
     </Layout>
   )
 }

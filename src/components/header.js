@@ -17,6 +17,9 @@ const Header = () => {
         <li >
           <Link className={headerStyles.nav} style={{textDecoration:'none',}} to='/contact'>Contact</Link>
         </li>
+        <li>
+          <Link className={headerStyles.nav} style={{textDecoration:'none'}} to='/about'>About</Link>
+        </li>
       </ul>
     </nav>
   )

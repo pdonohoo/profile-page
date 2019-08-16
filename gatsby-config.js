@@ -6,6 +6,7 @@ module.exports = {
     title: 'Donohoo Family Blog',
     author: 'Preston Donohoo'
   }, 
+  
 
   plugins: [
     'gatsby-plugin-sass', 
@@ -47,6 +48,7 @@ module.exports = {
             }
           }
         ]
+        
       }
     }
     
