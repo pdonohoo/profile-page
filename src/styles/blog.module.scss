@@ -34,4 +34,10 @@
 
 .post:hover{
   background-color: #ebebeb;
+} 
+
+@media screen and (max-width: 850px) {
+  .posts {
+    flex-direction: column;
+  }
 }
