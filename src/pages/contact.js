@@ -1,4 +1,6 @@
 import React, {useState} from "react"
+import Linkedin from '../images/linkedin.inline.svg'
+import Github from '../images/github.inline.svg'
 import axios from 'axios'
 
 // const axios = require('axios')
@@ -61,6 +63,7 @@ const Contact = () => {
   //   })
   // }
   
+  
 
   return (
     <Layout>
@@ -71,7 +74,10 @@ const Contact = () => {
         </div>
           <div className={contactStyles.header}>
           Email:<a href='mailto:preston.s.donohoo@gmail.com'>Preston Donohoo</a>
-
+          <div style={{padding: '20px'}}>
+            <a style={{ margin: '5px' }} href='https://www.linkedin.com/in/prestondonohoo/' target='_blank' rel="noopener noreferrer"><Linkedin style={{width: '50px' }}></Linkedin></a>
+            <a style={{ margin: '5px' }} href='https://github.com/pdonohoo' target='_blank'  rel="noopener noreferrer" ><Github style={{width: '50px'}} />  </a>
+          </div>
           </div>
       </div>
       {/* <form  className={contactStyles.form}>

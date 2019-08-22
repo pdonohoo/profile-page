@@ -62,10 +62,8 @@ const Blog = () => {
                           </p>
                           <p>
                             {post.node.excerpt}
-                            <Link  to={`/blog/${post.node.fields.slug}`}>
-                              <button style={{ color: 'rgb(19, 64, 107)', border: '1px solid black', borderRadius: '10px', color:  'rgb(19, 64, 107)', fontSize: '12px', margin: '0',  }}>
+                            <Link className={blogStyles.link}  to={`/blog/${post.node.fields.slug}`}>
                                 Read More!
-                              </button>
                             </Link>
                           </p>
                         </div>

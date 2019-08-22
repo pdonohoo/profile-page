@@ -31,9 +31,14 @@
 .data {
   justify-content: inherit
 }
+.link{
+  text-decoration: none;
+  color: black;
+  font-size: 25px;
+}
 
-.post:hover{
-  background-color: #ebebeb;
+.link:hover{
+  color:  rgb(19, 64, 107);
 } 
 
 @media only screen and (max-width: 850px) {
